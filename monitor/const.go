@@ -1,4 +1,3 @@
-// Copyright 2015
 // Author: zheng-ji.info
 
 package monitor

@@ -24,7 +24,6 @@ http://127.0.0.1:6062
 curl "http://127.0.0.1:6062/info"
 
 Cache HitRate: 0.742956
-QPS: 47
 Goroutine Num: 28
 PersisWrite(ms): 0.000000
 PersisRead(ms): 3.410000

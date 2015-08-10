@@ -57,11 +57,6 @@ func StatByAction(statType int, t time.Time) {
 }
 
 func infoHandler(w http.ResponseWriter, r *http.Request) {
-	hitRate := float64(0)
-	if defaultMonitor.cacheQueryTimes != 0 {
-		hitRate = float64(defaultMonitor.cacheHitTimes) / float64(defaultMonitor.cacheQueryTimes)
-	}
-
 	memstats := new(runtime.MemStats)
 	runtime.ReadMemStats(memstats)
 

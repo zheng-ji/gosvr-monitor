@@ -4,18 +4,18 @@ package main
 
 import (
 	"fmt"
+	"gosvr-monitor/monitor"
 	"os"
 	"os/signal"
 	"syscall"
-	"github.com/zheng-ji/gosvr-monitor/monitor"
 	"time"
 )
 
 func test_func1() {
 	timeStart := time.Now()
-	def func() {
-		go monitor.StatByAction(monitor)
-	}
+	defer func() {
+		go monitor.StatByAction(monitor.STAT_PERSIS_WRITE, timeStart)
+	}()
 }
 
 func main() {
@@ -25,6 +25,7 @@ func main() {
 	sigChan := make(chan os.Signal)
 	signal.Notify(sigChan, syscall.SIGUSR1, syscall.SIGTERM, syscall.SIGINT)
 
+	test_func1()
 
 L:
 	for {

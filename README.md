@@ -26,7 +26,7 @@ func func_test() {
 }
 
 func main() {
-	//初始化monitor, 自定义监控的命令,如READ,WRITE, 以及每次统计的阀值
+	// 初始化monitor, 自定义监控的命令,如READ,WRITE等自定义名称, 以及每次统计的阀值
     // 启动监控服务
 	monitor.InitMonitor([]string{"WRITE", "READ"}, 1)
 	monitor.StartMonitorServer("0.0.0.0:7070")
@@ -38,15 +38,14 @@ func main() {
 ### 访问
 
 ```
-http://127.0.0.1:7070
+curl "http://127.0.0.1:7070/info"
 ```
 
 ### 输出
 
 ```
 curl "http://127.0.0.1:7070/info"
-WRITE (ms):500.000000
-READ (ms):300.000000
-
+WRITE (ms):15.000000
+READ (ms):3.000000
 ```
 

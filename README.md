@@ -2,12 +2,12 @@
 
 #### 简介
 
-检测程序运行的各项数据，Goroutine 堆栈等
+自定义监控条目，检测程序运行时的各个操作耗费时长
 
 ### 编译和运行
 
 ```
-go get github.com/zheng-ji/govr-monitor
+go get github.com/zheng-ji/gosvr-monitor
 ```
 
 ### 使用范例

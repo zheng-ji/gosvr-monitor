@@ -7,7 +7,7 @@
 ### 编译和运行
 
 ```
-git get github.com/zheng-ji/govr-monitor
+go get github.com/zheng-ji/govr-monitor
 ```
 
 ### 使用范例

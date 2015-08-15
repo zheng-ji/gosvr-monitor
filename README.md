@@ -16,7 +16,7 @@ go get github.com/zheng-ji/gosvr-monitor
 import (
     "github.com/zheng-ji/gosvr-monitor"
 )
-func fun_test() {
+func func_test() {
 	timeStart := time.Now()
 	defer func() {
 		//defer 的时候统计监控, 用goroutine 使得不影响性能
@@ -30,7 +30,7 @@ func main() {
     // 启动监控服务
 	monitor.InitMonitor([]string{"WRITE", "READ"}, 1)
 	monitor.StartMonitorServer("0.0.0.0:7070")
-    fun_test
+    func_test()
     ...
 }
 ```

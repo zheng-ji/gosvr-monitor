@@ -4,7 +4,7 @@ package main
 
 import (
 	"fmt"
-	"gosvr-monitor/monitor"
+	"github.com/zheng-ji/gosvr-monitor/monitor"
 	"os"
 	"os/signal"
 	"syscall"

@@ -26,7 +26,7 @@ func fun_test() {
 }
 
 func main() {
-	//初始化monitor, 自定义监控的命令,如READ,WRITE, 以及每次统计的法值
+	//初始化monitor, 自定义监控的命令,如READ,WRITE, 以及每次统计的阀值
     // 启动监控服务
 	monitor.InitMonitor([]string{"WRITE", "READ"}, 1)
 	monitor.StartMonitorServer("0.0.0.0:7070")

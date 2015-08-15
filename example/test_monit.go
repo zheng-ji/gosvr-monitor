@@ -11,21 +11,35 @@ import (
 	"time"
 )
 
-func test_func1() {
+func monitor_write() {
 	timeStart := time.Now()
+	time.Sleep(500 * time.Millisecond)
 	defer func() {
-		go monitor.StatByAction(monitor.STAT_PERSIS_WRITE, timeStart)
+		//defer 的时候统计监控, 用goroutine 使得不影响性能
+		go monitor.StatByAction("WRITE", timeStart)
+	}()
+}
+
+func monitor_read() {
+	timeStart := time.Now()
+	time.Sleep(300 * time.Millisecond)
+	defer func() {
+		//defer 的时候统计监控, 用goroutine 使得不影响性能
+		go monitor.StatByAction("READ", timeStart)
 	}()
 }
 
 func main() {
-	// 启动监控服务
-	monitor.StartMonitorServer("0.0.0.0:6062")
+
+	//初始化monitor, 自定义监控的命令,如READ,WRITE, 并启动监控服务
+	monitor.InitMonitor([]string{"WRITE", "READ"}, 1)
+	monitor.StartMonitorServer("0.0.0.0:7070")
 
 	sigChan := make(chan os.Signal)
 	signal.Notify(sigChan, syscall.SIGUSR1, syscall.SIGTERM, syscall.SIGINT)
 
-	test_func1()
+	monitor_read()
+	monitor_write()
 
 L:
 	for {

@@ -7,13 +7,15 @@
 ### 编译和运行
 
 ```
-git clone github.com/zheng-ji/govr-monitor
+git get github.com/zheng-ji/govr-monitor
 ```
 
 ### 使用范例
 
 ```go
-import "github.com/zheng-ji/gosvr-monitor/monitor"
+import (
+    "github.com/zheng-ji/gosvr-monitor"
+)
 func fun_test() {
 	timeStart := time.Now()
 	defer func() {

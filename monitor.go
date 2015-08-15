@@ -31,7 +31,6 @@ func InitMonitor(stat_items []string, num_of_limit int) {
 		numLimit: num_of_limit,
 	}
 
-	fmt.Println(len(stat_items))
 	for i := 0; i < len(stat_items); i++ {
 		defaultMonitor.statMaps[stat_items[i]] = &StatUnit{
 			sumMs:        0,

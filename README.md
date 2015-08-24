@@ -1,7 +1,5 @@
 ### gosvr-monitor
 
-#### Description
-
 Customize Your Monitor Items, Inspect the time each of them spend
 
 自定义监控条目，检测程序运行时的各个操作耗费时长

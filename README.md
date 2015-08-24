@@ -2,15 +2,16 @@
 
 #### 简介
 
+Customize Your Monitor Items, Inspect the time each of them spend
 自定义监控条目，检测程序运行时的各个操作耗费时长
 
-### 编译和运行
+### Complie
 
 ```
 go get github.com/zheng-ji/gosvr-monitor
 ```
 
-### 使用范例
+### Example
 
 ```go
 import (
@@ -35,13 +36,13 @@ func main() {
 }
 ```
 
-### 访问
+### How To Use
 
 ```
 curl "http://127.0.0.1:7070/info"
 ```
 
-### 输出
+### OutPut
 
 ```
 curl "http://127.0.0.1:7070/info"

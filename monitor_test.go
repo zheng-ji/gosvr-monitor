@@ -11,11 +11,9 @@ import (
 )
 
 func TestMonitor(t *testing.T) {
-	fmt.Println("start")
 	InitMonitor([]string{"WRITE", "READ"}, 1)
 	StartMonitorServer("0.0.0.0:7070")
 	timeStart := time.Now()
 	time.Sleep(300 * time.Millisecond)
 	StatByAction("READ", timeStart)
-	fmt.Println("end")
 }

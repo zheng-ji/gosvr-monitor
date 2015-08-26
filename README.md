@@ -1,4 +1,6 @@
-### gosvr-monitor
+[![Build Status](https://travis-ci.org/zheng-ji/gosvr-monitor.svg)](https://travis-ci.org/zheng-ji/gosvr-monitor)
+
+## gosvr-monitor
 
 Customize Your Monitor Items, Inspect the time each of them spend
 

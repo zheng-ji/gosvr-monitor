@@ -5,7 +5,6 @@ Copyright (c) 2015, zheng-ji.info
 package monitor
 
 import (
-	"fmt"
 	"testing"
 	"time"
 )

@@ -18,15 +18,15 @@ type StatUnit struct {
 }
 
 //统计机
-type monitor struct {
+type Monitor struct {
 	statMaps map[string]*StatUnit
 	numLimit int
 }
 
-var defaultMonitor *monitor
+var defaultMonitor *Monitor
 
 func InitMonitor(stat_items []string, num_of_limit int) {
-	defaultMonitor = &monitor{
+	defaultMonitor = &Monitor{
 		statMaps: make(map[string]*StatUnit),
 		numLimit: num_of_limit,
 	}

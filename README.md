@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/zheng-ji/gosvr-monitor.svg)](https://travis-ci.org/zheng-ji/gosvr-monitor)
+[![Build Status](https://travis-ci.org/zheng-ji/gosvr-monitor.svg)](https://travis-ci.org/zheng-ji/gosvr-monitor) [![GoDoc](https://godoc.org/github.com/zheng-ji/gosvr-monitor?status.svg)](https://godoc.org/github.com/zheng-ji/gosvr-monitor)
 
 ## gosvr-monitor
 

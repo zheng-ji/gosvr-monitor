@@ -50,5 +50,7 @@ curl "http://127.0.0.1:7070/info"
 WRITE (ms):15.000000
 READ (ms):3.000000
 ```
-------
-MIT License
+License
+-------
+
+Copyright (c) 2015 by [zheng-ji](zheng-ji.info) released under a MIT style license.
